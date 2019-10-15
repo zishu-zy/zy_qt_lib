@@ -6,7 +6,7 @@
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-12 13:48:15
- *  Last Modified: 2019-10-15 10:19:49
+ *  Last Modified: 2019-10-15 14:38:42
  *
  * ==============================================================
  */
@@ -26,6 +26,7 @@ public:
 
     void setBtnNames(const QStringList &names);
     void setBtnSize(int w, int h);
+    void setBtnInterval(int interval);
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option,
                const QModelIndex &index) const;
@@ -44,6 +45,7 @@ private:
     QStringList m_ListBtnName;
     int m_nBtnWidth;
     int m_nBtnHeight;
+    int m_nBtnInterval;
 };
 
 #endif // ITEM_DELEGATE_BTN_H_

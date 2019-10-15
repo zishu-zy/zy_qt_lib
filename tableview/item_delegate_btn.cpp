@@ -6,7 +6,7 @@
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-12 13:48:15
- *  Last Modified: 2019-10-15 10:41:37
+ *  Last Modified: 2019-10-15 14:40:01
  *
  * ==============================================================
  */
@@ -27,7 +27,8 @@ static inline bool isInside(int xleft, int xright, int ytop, int ybottom, int x,
 }
 
 ItemDelegateBtn::ItemDelegateBtn(QWidget *parent)
-    : QStyledItemDelegate(parent), m_nBtnWidth(30), m_nBtnHeight(30)
+    : QStyledItemDelegate(parent), m_nBtnWidth(30), m_nBtnHeight(30),
+      m_nBtnInterval(5)
 {
 }
 
@@ -44,6 +45,11 @@ void ItemDelegateBtn::setBtnSize(int w, int h)
     m_nBtnHeight = h;
 }
 
+void ItemDelegateBtn::setBtnInterval(int interval)
+{
+    m_nBtnInterval = interval;
+}
+
 void ItemDelegateBtn::paint(QPainter *painter,
                             const QStyleOptionViewItem &option,
                             const QModelIndex &index) const
@@ -54,7 +60,7 @@ void ItemDelegateBtn::paint(QPainter *painter,
         QStyleOptionButton *button = new QStyleOptionButton();
         QRect r = option.rect;
         int x, y;
-        x = r.left() + (m_nBtnWidth + 5) * i;
+        x = r.left() + (m_nBtnWidth + m_nBtnInterval) * i;
         y = r.top();
         button->rect = QRect(x, y, m_nBtnWidth, m_nBtnHeight);
         button->text = m_ListBtnName.at(i);
@@ -98,7 +104,7 @@ int ItemDelegateBtn::getBtnFromXY(const QStyleOptionViewItem &option, int x,
     int itemY = option.rect.top();
     int len = m_ListBtnName.size();
     for (int i = 0; i < len; ++i) {
-        if (isInside(itemX + (m_nBtnWidth + 5) * i,
+        if (isInside(itemX + (m_nBtnWidth + m_nBtnInterval) * i,
                      itemX + m_nBtnWidth * (i + 1), itemY, itemY + m_nBtnHeight,
                      x, y)) {
             btn = i;
