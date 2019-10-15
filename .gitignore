@@ -1,0 +1,8 @@
+Debug
+.vscode
+zy_qt_lib
+Makefile
+moc_*.cpp
+*.o
+*.swp
+*.pro.user
