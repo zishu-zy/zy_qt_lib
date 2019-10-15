@@ -2,11 +2,11 @@
  * ==============================================================
  *
  *       FileName: item_delegate_btn.cpp
- *    Description:
+ *    Description: 自定义委托 - btn
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-12 13:48:15
- *  Last Modified: 2019-10-15 14:40:01
+ *  Last Modified: 2019-10-15 17:49:19
  *
  * ==============================================================
  */

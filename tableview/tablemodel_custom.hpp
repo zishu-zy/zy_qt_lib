@@ -1,8 +1,8 @@
 /*
  * ==============================================================
  *
- *       FileName: tablemodel_custom.h
- *    Description:
+ *       FileName: tablemodel_custom.hpp
+ *    Description: 配套自定义tableview的自定义model
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-12 13:48:15

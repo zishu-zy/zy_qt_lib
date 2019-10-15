@@ -6,7 +6,7 @@
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-14 14:13:23
- *  Last Modified: 2019-10-15 14:23:05
+ *  Last Modified: 2019-10-15 14:44:00
  *
  * ==============================================================
  */
@@ -67,6 +67,7 @@ void MainWidget::initUI()
                                  << "删除"
                                  << "恢复");
     t->setBtnSize(40, 30);
+    t->setBtnInterval(10);
     m_pTView->setItemDelegateForColumn(4, t);
     m_pTView->setColumnWidth(4, 200);
 

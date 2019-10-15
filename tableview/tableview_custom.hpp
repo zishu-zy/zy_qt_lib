@@ -1,8 +1,8 @@
 /*
  * ==============================================================
  *
- *       FileName: tableview_custom.h
- *    Description:
+ *       FileName: tableview_custom.hpp
+ *    Description: 自定义tableview
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-12 13:48:15
@@ -15,7 +15,7 @@
 #define TABLEVIEW_CUSTOM_H_
 
 #include <QTableView>
-#include "tablemodel_custom.h"
+#include "tablemodel_custom.hpp"
 
 template <typename DataType>
 class TableViewCustom : public QTableView

@@ -2,16 +2,16 @@
  * ==============================================================
  *
  *       FileName: tablemodel_custom.cpp
- *    Description:
+ *    Description: 配套自定义tableview的自定义model
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-12 13:48:15
- *  Last Modified: 2019-10-15 13:34:28
+ *  Last Modified: 2019-10-15 17:48:54
  *
  * ==============================================================
  */
 
-#include "tablemodel_custom.h"
+#include "tablemodel_custom.hpp"
 #include <QToolTip>
 
 template <typename DataType>
