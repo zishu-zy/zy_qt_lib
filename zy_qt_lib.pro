@@ -27,14 +27,18 @@ SOURCES += \
         main.cpp \
         mainwidget.cpp \
     tableview/tablemodel_custom.cpp \
-    tableview/item_delegate_btn.cpp \
     tableview/tableview_custom.cpp \
+#    tableview/tablemodel_custom_poly.cpp \
+#    tableview/tableview_custom_poly.cpp \
+    tableview/item_delegate_btn.cpp \
     tableview/item_delegate_checkbtn.cpp
 
 HEADERS += \
         mainwidget.h \
     data_define.h \
-    tableview/item_delegate_btn.h \
     tableview/tablemodel_custom.h \
     tableview/tableview_custom.h \
+#    tableview/tablemodel_custom_poly.h \
+#    tableview/tableview_custom_poly.h \
+    tableview/item_delegate_btn.h \
     tableview/item_delegate_checkbtn.h

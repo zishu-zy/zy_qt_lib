@@ -25,7 +25,7 @@ public:
     virtual ~TableViewCustom();
 
     void setHeaders(const QStringList &headerlist);
-    void setDataList(const QList<DataType> &datalist);
+    void setDataList(QList<DataType> &datalist);
 
 private:
     TableModelCustom<DataType> *m_pModel;

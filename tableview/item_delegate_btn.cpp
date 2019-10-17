@@ -6,7 +6,7 @@
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-12 13:48:15
- *  Last Modified: 2019-10-15 17:49:19
+ *  Last Modified: 2019-10-17 11:54:31
  *
  * ==============================================================
  */
@@ -105,8 +105,8 @@ int ItemDelegateBtn::getBtnFromXY(const QStyleOptionViewItem &option, int x,
     int len = m_ListBtnName.size();
     for (int i = 0; i < len; ++i) {
         if (isInside(itemX + (m_nBtnWidth + m_nBtnInterval) * i,
-                     itemX + m_nBtnWidth * (i + 1), itemY, itemY + m_nBtnHeight,
-                     x, y)) {
+                     itemX + m_nBtnWidth * (i + 1) + m_nBtnInterval * i, itemY,
+                     itemY + m_nBtnHeight, x, y)) {
             btn = i;
             break;
         }

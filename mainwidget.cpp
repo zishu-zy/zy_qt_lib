@@ -6,12 +6,13 @@
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-14 14:13:23
- *  Last Modified: 2019-10-15 14:44:00
+ *  Last Modified: 2019-10-17 14:19:53
  *
  * ==============================================================
  */
 #include "mainwidget.h"
 #include <QApplication>
+#include <QDebug>
 #include <QDesktopWidget>
 #include <QHeaderView>
 #include "tableview/item_delegate_btn.h"
@@ -40,14 +41,13 @@ void MainWidget::initUI()
     this->move(screenRect.size().width() / 2 - 250,
                screenRect.size().height() / 2 - 150);
 
-    QList<TestDataInfo> testDatas;
     for (int i = 0; i < 2; ++i) {
         TestDataInfo t;
-        t.strID = QString::number(i);
-        t.strName = QString::fromLocal8Bit("小明%1").arg(i);
-        t.strOther = "other";
-        t.bAdmin = false;
-        testDatas.append(t);
+        t.setData(0, QString::number(i));
+        t.setData(1, QString::fromLocal8Bit("小明%1").arg(i));
+        t.setData(2, "other");
+        t.setData(3,false);
+        m_ListTestDatas.append(t);
     }
     QStringList headers;
     headers << "id"
@@ -55,7 +55,7 @@ void MainWidget::initUI()
             << "other"
             << "管理员" << QString::fromLocal8Bit("操作");
     m_pTView->setHeaders(headers);
-    m_pTView->setDataList(testDatas);
+    m_pTView->setDataList(m_ListTestDatas);
 
     ItemDelegateCheckBtn *checkBtn = new ItemDelegateCheckBtn(this);
     m_pTView->setItemDelegateForColumn(3, checkBtn);

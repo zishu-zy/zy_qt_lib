@@ -6,7 +6,7 @@
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-14 14:10:02
- *  Last Modified: 2019-10-15 13:32:44
+ *  Last Modified: 2019-10-17 14:17:38
  *
  * ==============================================================
  */
@@ -15,6 +15,7 @@
 
 #include <QString>
 #include <QVariant>
+// #include "tableview/tableview_custom_poly.h"
 
 #ifndef SAFE_DELETE
 #define SAFE_DELETE(p)                                                         \
@@ -72,5 +73,61 @@ struct TestDataInfo {
         }
     }
 };
+
+/*
+class TestData : public ITableModelData
+{
+public:
+    TestData() : strID(""), strName(""), strOther(""), bAdmin(false) {}
+    ~TestData() {}
+
+    QVariant getData(int i) override
+    {
+        QVariant result;
+        switch (i) {
+        case 0:
+            result = strID;
+            break;
+        case 1:
+            result = strName;
+            break;
+        case 2:
+            result = strOther;
+            break;
+        case 3:
+            result = bAdmin;
+            break;
+        default:
+            result = "";
+        }
+        return result;
+    }
+    void setData(int i, const QVariant &data) override
+    {
+        switch (i) {
+        case 0:
+            strID = data.toString();
+            break;
+        case 1:
+            strName = data.toString();
+            break;
+        case 2:
+            strOther = data.toString();
+            break;
+        case 3:
+            bAdmin = data.toBool();
+            break;
+        default:
+            break;
+        }
+    }
+
+private:
+    QString strID;
+    QString strName;
+    QString strOther;
+    bool bAdmin;
+};
+*/
 
 #endif // DATA_DEFINE_H_

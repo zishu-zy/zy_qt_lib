@@ -27,7 +27,7 @@ public:
     virtual ~TableModelCustom();
 
     void setHeaders(const QStringList &headerlist);
-    void setDataList(const QList<DataType> &datalist);
+    void setDataList(QList<DataType> *datalist);
 
 private:
     virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;
@@ -36,15 +36,13 @@ private:
                           int role = Qt::DisplayRole) const;
     virtual QVariant headerData(int section, Qt::Orientation orientation,
                                 int role) const;
-    virtual Qt::ItemFlags flags(const QModelIndex &index) const;
     virtual bool setData(const QModelIndex &index, const QVariant &value,
                          int role);
 
     QVariant getData(int nRow, int nClolumn) const;
-    // QVariant getChecked(int nRow, int nClolumn) const;
 
 private:
-    QList<DataType> m_ListDatas;
+    QList<DataType> *m_pListDatas;
     QStringList m_strHeaders;
     mutable QMutex m_mutex;
 };

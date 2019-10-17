@@ -6,7 +6,7 @@
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-14 14:13:23
- *  Last Modified: 2019-10-15 14:23:19
+ *  Last Modified: 2019-10-17 14:13:36
  *
  * ==============================================================
  */
@@ -16,7 +16,8 @@
 #include <QGridLayout>
 #include <QWidget>
 #include "data_define.h"
-#include "tableview/tableview_custom.h"
+#include "tableview/tableview_custom.hpp"
+// #include "tableview/tableview_custom_poly.h"
 
 class MainWidget : public QWidget
 {
@@ -35,6 +36,8 @@ private slots:
 private:
     TableViewCustom<TestDataInfo> *m_pTView;
     QGridLayout *m_pGLayoutMain;
+
+    QList<TestDataInfo> m_ListTestDatas;
 };
 
 #endif // MAINWIDGET_H
