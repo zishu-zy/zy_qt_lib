@@ -6,7 +6,7 @@
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-12 13:48:15
- *  Last Modified: 2019-10-17 14:11:20
+ *  Last Modified: 2019-10-22 13:44:46
  *
  * ==============================================================
  */
@@ -33,13 +33,13 @@ void TableModelCustom<DataType>::setHeaders(const QStringList &headerlist)
 }
 
 template <typename DataType>
-void TableModelCustom<DataType>::setDataList(QList<DataType> *datalist)
+void TableModelCustom<DataType>::setDataList(QList<DataType> &datalist)
 {
     beginResetModel();
     if(m_pListDatas != NULL) {
         delete m_pListDatas;
     }
-    m_pListDatas = datalist;
+    m_pListDatas = &datalist;
     endResetModel();
 }
 

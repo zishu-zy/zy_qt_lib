@@ -27,7 +27,7 @@ public:
     virtual ~TableModelCustom();
 
     void setHeaders(const QStringList &headerlist);
-    void setDataList(QList<DataType> *datalist);
+    void setDataList(QList<DataType> &datalist);
 
 private:
     virtual int rowCount(const QModelIndex &parent = QModelIndex()) const;

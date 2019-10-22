@@ -6,7 +6,7 @@
  *
  *         Author: zhaiyu, zhaiyu@qianxin.com
  *        Created: 2019-10-12 13:48:15
- *  Last Modified: 2019-10-17 14:12:09
+ *  Last Modified: 2019-10-22 13:45:04
  *
  * ==============================================================
  */
@@ -37,6 +37,6 @@ void TableViewCustom<DataType>::setHeaders(const QStringList &headerlist)
 template <typename DataType>
 void TableViewCustom<DataType>::setDataList(QList<DataType> &datalist)
 {
-    m_pModel->setDataList(&datalist);
+    m_pModel->setDataList(datalist);
 }
 
