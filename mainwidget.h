@@ -4,7 +4,7 @@
  *       FileName: mainwidget.h
  *    Description: 测试的主界面
  *
- *         Author: zhaiyu, zhaiyu@qianxin.com
+ *         Author: zishu, zishuzy@qq.com
  *        Created: 2019-10-14 14:13:23
  *  Last Modified: 2019-10-17 14:13:36
  *

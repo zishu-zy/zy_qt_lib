@@ -4,7 +4,7 @@
  *       FileName: item_delegate_checkbtn.h
  *    Description: 自定义委托 - checkbox
  *
- *         Author: zhaiyu, zhaiyu@qianxin.com
+ *         Author: zishu, zishuzy@qq.com
  *        Created: 2019-10-15 11:42:33
  *  Last Modified: 2019-10-15 17:49:44
  *
