@@ -4,7 +4,7 @@
  *       FileName: tablemodel_custom.hpp
  *    Description: 配套自定义tableview的自定义model
  *
- *         Author: zhaiyu, zhaiyu@qianxin.com
+ *         Author: zishu, zishuzy@qq.com
  *        Created: 2019-10-12 13:48:15
  *  Last Modified: 2019-10-14 14:21:39
  *
