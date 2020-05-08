@@ -13,11 +13,10 @@
 #ifndef MAINWIDGET_H
 #define MAINWIDGET_H
 
-#include <QGridLayout>
+#include <QVBoxLayout>
 #include <QWidget>
-#include "data_define.h"
-#include "tableview/tableview_custom.hpp"
-// #include "tableview/tableview_custom_poly.h"
+#include "date/test_date_widget.h"
+#include "tableview/test_tableview_widget.h"
 
 class MainWidget : public QWidget
 {
@@ -30,14 +29,12 @@ public:
 private:
     void initUI();
 
-private slots:
-    void slotBtnClicked(int row, int btn);
-
 private:
     TableViewCustom<TestDataInfo> *m_pTView;
-    QGridLayout *m_pGLayoutMain;
+    QVBoxLayout *m_pVLayoutMain;
 
-    QList<TestDataInfo> m_ListTestDatas;
+    CTestDateWidget *m_pTestDateWidget;
+    CTestTableViewWidget *m_pTestTableViewWidget;
 };
 
 #endif // MAINWIDGET_H
