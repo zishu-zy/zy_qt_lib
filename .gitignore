@@ -6,3 +6,4 @@ moc_*.cpp
 *.o
 *.swp
 *.pro.user
+compile_commands.json
